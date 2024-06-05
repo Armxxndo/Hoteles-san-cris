@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Hotel Mansion del valle</title>
+    <style>
+        /* Estilos CSS para el cuerpo y los elementos de la página */
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h2 {
+            color: #32CD32; /* Color verde claro */
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        /* Estilos CSS para el carrusel de imágenes */
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            border: 2px solid #32CD32; /* Borde verde claro */
+            border-radius: 10px; /* Bordes redondeados */
+            overflow: hidden;
+            text-align: center; /* Centra las imágenes horizontalmente */
+        }
+        .slides {
+            display: none; /* Oculta todas las imágenes */
+        }
+        .slides img {
+            width: 50%; /* Establece el ancho de las imágenes al 50% */
+        }
+        .active {
+            display: block; /* Muestra la imagen activa */
+        }
+        /* Estilos CSS para las flechas de navegación */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px; /* Centra verticalmente las flechas */
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        }
+        .prev {
+            left: 0; /* Posiciona la flecha izquierda al inicio del carrusel */
+            border-radius: 3px 0 0 3px; /* Bordes redondeados en la esquina izquierda */
+        }
+        .next {
+            right: 0; /* Posiciona la flecha derecha al final del carrusel */
+            border-radius: 0 3px 3px 0; /* Bordes redondeados en la esquina derecha */
+        }
+        /* Cambia el color de fondo de las flechas al pasar el ratón */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Más oscuro al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <h2>Hotel Mansion del valle</h2>
+    <p>
+        El hotel tiene Ia tematica de
+        oxchuc, chamula y Iarrainzar
+        Contamos con estacionamiento
+        Agua caliente.
+        
+        Telefonia.
+        
+        TV con cable.
+        
+        Renta de carros.
+        
+        Se puede usar para hacer bodas
+        cumpleafios en la terraza.
+        
+        Una habitacion en temporada baja
+        esta en $950 y en temporada alta
+        $1650 para una persona extra se
+        paga $150 Hotel Mansión del Valle.
+        
+        El hotel tiene la temática de
+        oxchuc, chamula y Iarrainzar
+        Contamos con estacionamiento
+        agua caliente.
+        
+        Telefonía.
+        
+        TV con cable.
+        
+        Alquiler de carros.
+        
+        Se puede usar para hacer bodas.
+        cumpleaños en la terraza.
+        
+        Una habitación en temporada baja.
+        esta en $950 y en temporada alta
+        $1650 para una persona extra se
+        paga $150.
+    </p>
+            <!-- Contenedores de imagenes -->
+    <div class="carousel">
+        <div class="slides active">
+            <img src="imagenes/hotel-boo-margarita/1717545498248.jpg" style="width:50%">
+        </div>
+        <div class="slides">
+            <img src="imagenes/hotel-boo-margarita/1717545498210.jpg" style="width:50%">
+        </div>
+        <div class="slides">
+            <img src="imagenes/hotel-boo-margarita/1717545498174.jpg" style="width:50%">
+        </div>
+        <div class="slides active">
+            <img src="imagenes/hotel-boo-margarita/1717545498145.jpg" style="width:50%">
+        </div>
+            <!-- Flechas de navegación -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+            <!-- Script para el carrusel de imágenes -->
+    <script>
+        // Variable para rastrear el índice de la diapositiva actual
+        let slideIndex = 0;
+        showSlides();
+            // Función para avanzar o retroceder en las diapositivas
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+            // Función para mostrar una diapositiva específica
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            if (n >= slides.length) {slideIndex = 0}
+            if (n < 0) {slideIndex = slides.length - 1}
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+            // Función para iniciar automáticamente el carrusel
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Cambia la imagen cada 2 segundos
+        }
+    </script>
+</body>
+</html>

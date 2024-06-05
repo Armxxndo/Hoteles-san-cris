@@ -7,11 +7,11 @@
         body {
             margin: 20px;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #000000;
+            color: #ffffff;
         }
         h2 {
-            color: #32CD32; /* Color verde claro */
+            color: #bb791d; /* Color verde claro */
         }
         p {
             font-size: 1.2em;
@@ -22,7 +22,7 @@
             position: relative;
             max-width: 100%;
             margin: auto;
-            border: 2px solid #32CD32; /* Borde verde claro */
+            border: 2px solid #bb791d; /* Borde verde claro */
             border-radius: 10px; /* Bordes redondeados */
             overflow: hidden;
             text-align: center; /* Centra las imágenes horizontalmente */
@@ -36,37 +36,13 @@
         .active {
             display: block; /* Muestra la imagen activa */
         }
-        /* Estilos CSS para las flechas de navegación */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px; /* Centra verticalmente las flechas */
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-        }
-        .prev {
-            left: 0; /* Posiciona la flecha izquierda al inicio del carrusel */
-            border-radius: 3px 0 0 3px; /* Bordes redondeados en la esquina izquierda */
-        }
-        .next {
-            right: 0; /* Posiciona la flecha derecha al final del carrusel */
-            border-radius: 0 3px 3px 0; /* Bordes redondeados en la esquina derecha */
-        }
         /* Cambia el color de fondo de las flechas al pasar el ratón */
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8); /* Más oscuro al pasar el ratón */
         }
     </style>
 </head>
-<body>
+<body><center>
     <h2>Hotel Ciudad Real Centro Histórico</h2>
     <p>
         Con una ubicación privilegiada en el centro histórico, este hotel ofrece habitaciones
@@ -120,7 +96,7 @@
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Cambia la imagen cada 2 segundos
+            setTimeout(showSlides, 3000); // Cambia la imagen cada 2 segundos   
         }
     </script>
 </body>
